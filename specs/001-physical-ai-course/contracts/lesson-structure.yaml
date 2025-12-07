@@ -1,0 +1,88 @@
+# Lesson Structure Schema
+
+Lesson:
+  type: object
+  required:
+    - id
+    - chapter_id
+    - title
+    - content_type
+    - estimated_time
+    - learning_objectives
+    - content_sections
+    - order
+  properties:
+    id:
+      type: string
+      pattern: '^[a-z0-9-]+$'
+      example: "first-node"
+    chapter_id:
+      type: string
+      example: "ch2-python-rclpy"
+    title:
+      type: string
+      minLength: 5
+      maxLength: 100
+      example: "Creating Your First Node"
+    content_type:
+      type: string
+      enum:
+        - theory
+        - hands-on
+        - exercise
+        - assessment
+      example: "hands-on"
+    estimated_time:
+      type: string
+      pattern: '^\d+ minutes?$'
+      example: "45 minutes"
+    prerequisites:
+      type: array
+      items:
+        type: string
+      example:
+        - "ROS 2 installed and sourced"
+        - "Python 3.10+ available"
+    learning_objectives:
+      type: array
+      minItems: 2
+      items:
+        type: string
+      example:
+        - "Write a minimal ROS 2 node in Python using rclpy"
+        - "Understand node lifecycle"
+    content_sections:
+      type: array
+      minItems: 3
+      items:
+        $ref: '#/ContentSection'
+    order:
+      type: integer
+      minimum: 1
+      example: 1
+
+ContentSection:
+  type: object
+  required:
+    - type
+    - markdown_content
+  properties:
+    type:
+      type: string
+      enum:
+        - intro
+        - concept
+        - example
+        - exercise
+        - summary
+      example: "concept"
+    markdown_content:
+      type: string
+      minLength: 100
+      example: "A ROS 2 node is a process that performs computation..."
+    code_examples:
+      type: array
+      items:
+        type: string
+      example:
+        - "minimal_node_py"

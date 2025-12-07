@@ -1,0 +1,63 @@
+.hardware-spec-card {
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background-color: var(--ifm-background-surface-color);
+  transition: box-shadow 0.3s;
+}
+
+.hardware-spec-card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.hardware-spec-card.required {
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.hardware-spec-card.optional {
+  border-left: 4px solid var(--ifm-color-info);
+}
+
+.hardware-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.hardware-header h4 {
+  margin: 0;
+  color: var(--ifm-heading-color);
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--ifm-color-info);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.hardware-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spec-section {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 0.5rem;
+}
+
+.spec-section strong {
+  color: var(--ifm-color-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.spec-section p {
+  margin: 0;
+  color: var(--ifm-font-color-base);
+}

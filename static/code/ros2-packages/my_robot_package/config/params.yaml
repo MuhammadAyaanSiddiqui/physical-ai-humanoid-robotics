@@ -1,0 +1,12 @@
+# Example parameter configuration file for my_robot_package
+
+/**:
+  ros__parameters:
+    # Node parameters
+    publish_rate: 1.0
+    message_prefix: "Hello from YAML"
+
+    # You can add more parameters here
+    # debug_mode: false
+    # max_velocity: 1.5
+    # timeout: 5.0

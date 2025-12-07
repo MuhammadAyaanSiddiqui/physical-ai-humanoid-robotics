@@ -1,0 +1,62 @@
+# Module Structure Schema
+# OpenAPI-style schema for module metadata
+
+Module:
+  type: object
+  required:
+    - id
+    - title
+    - weeks
+    - week_range
+    - learning_outcomes
+    - order
+  properties:
+    id:
+      type: string
+      pattern: '^module-\d+-[a-z0-9-]+$'
+      example: "module-1-ros2"
+    title:
+      type: string
+      minLength: 5
+      maxLength: 100
+      example: "The Robotic Nervous System"
+    subtitle:
+      type: string
+      example: "ROS 2 Fundamentals"
+    weeks:
+      type: integer
+      minimum: 1
+      maximum: 4
+      example: 3
+    week_range:
+      type: string
+      pattern: '^\d+-\d+$'
+      example: "3-5"
+    description:
+      type: string
+      minLength: 50
+      example: "Master ROS 2, the middleware that powers modern robotics..."
+    learning_outcomes:
+      type: array
+      minItems: 3
+      items:
+        type: string
+      example:
+        - "Create ROS 2 nodes using Python (rclpy)"
+        - "Implement publisher/subscriber communication patterns"
+        - "Build URDF models for humanoid robots"
+    prerequisites:
+      type: array
+      items:
+        type: string
+      example:
+        - "Python basics"
+        - "Ubuntu 22.04 installed"
+    order:
+      type: integer
+      minimum: 1
+      example: 1
+    chapters:
+      type: array
+      items:
+        $ref: '#/Chapter'

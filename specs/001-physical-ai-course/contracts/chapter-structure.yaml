@@ -1,0 +1,47 @@
+# Chapter Structure Schema
+
+Chapter:
+  type: object
+  required:
+    - id
+    - module_id
+    - title
+    - estimated_time
+    - difficulty_level
+    - order
+  properties:
+    id:
+      type: string
+      pattern: '^ch\d+-[a-z0-9-]+$'
+      example: "ch1-fundamentals"
+    module_id:
+      type: string
+      example: "module-1-ros2"
+    title:
+      type: string
+      minLength: 5
+      maxLength: 100
+      example: "ROS 2 Fundamentals"
+    estimated_time:
+      type: string
+      pattern: '^\d+-?\d* hours?$'
+      example: "3-4 hours"
+    difficulty_level:
+      type: string
+      enum:
+        - beginner
+        - intermediate
+        - advanced
+      example: "beginner"
+    description:
+      type: string
+      minLength: 50
+      example: "Introduction to ROS 2 architecture, installation, and basic concepts..."
+    order:
+      type: integer
+      minimum: 1
+      example: 1
+    lessons:
+      type: array
+      items:
+        $ref: '#/Lesson'
