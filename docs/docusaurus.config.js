@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: process.env.VERCEL ? 'https://physical-ai-humanoid-robotics-silk.vercel.app/' : 'https://muhammadayaansiddiqui.github.io',
+  url: process.env.VERCEL ? 'https://physical-ai-humanoid-robotics-gilt.vercel.app' : 'https://muhammadayaansiddiqui.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   // For Vercel, use '/' as root
