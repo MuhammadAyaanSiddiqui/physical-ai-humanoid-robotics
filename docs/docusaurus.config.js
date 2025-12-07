@@ -24,12 +24,12 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   // For Vercel, use '/' as root
-  baseUrl: process.env.VERCEL ? '/' : '/Physical-AI---Humanoid-Robotics/',
+  baseUrl: process.env.VERCEL ? '/' : '/physical-ai-humanoid-robotics/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'MuhammadAyaanSiddiqui', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI---Humanoid-Robotics', // Usually your repo name.
+  projectName: 'physical-ai-humanoid-robotics', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
