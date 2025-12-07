@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ayaan-physical-ai.github.io',
+  url: 'https://muhammadayaansiddiqui.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-ai-humanoid-robotics/',
+  baseUrl: '/Physical-AI---Humanoid-Robotics/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ayaan', // Usually your GitHub org/user name.
-  projectName: 'Physical-ai-humanoid-robotics', // Usually your repo name.
+  organizationName: 'MuhammadAyaanSiddiqui', // Usually your GitHub org/user name.
+  projectName: 'Physical-AI---Humanoid-Robotics', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
